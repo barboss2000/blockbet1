@@ -236,8 +236,8 @@ display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:
 <label style="font-size:10px;color:#666;letter-spacing:1px;text-transform:uppercase;">Contract Address (opt1...)</label>
 <input id="inputContract" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#fff;margin:6px 0 14px;outline:none;box-sizing:border-box;" placeholder="opt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp"/>
 <label style="font-size:10px;color:#666;letter-spacing:1px;text-transform:uppercase;">RPC URL</label>
-<input id="inputRpc" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#fff;margin:6px 0 4px;outline:none;box-sizing:border-box;" placeholder="https://testnet.opnet.org/api/v1/json-rpc"/>
-<div style="font-size:10px;color:#555;margin-bottom:16px;">Variants: https://testnet.opnet.org/api/v1/json-rpc</div>
+<input id="inputRpc" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#fff;margin:6px 0 4px;outline:none;box-sizing:border-box;" placeholder="https://testnet.opnet.org"/>
+<div style="font-size:10px;color:#555;margin-bottom:16px;">Default: https://testnet.opnet.org</div>
 <button onclick="applySettings()" style="width:100%;background:var(--btc);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Apply & Reload</button>
 </div>
 </div>
@@ -375,10 +375,11 @@ ODD<span class="bsub">1,3,5,7,9,b,d,f</span>
 </div>
 </div>
 <script>
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
 const CONTRACT = 'opt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp';
 function getContract() { return window._contractOverride || CONTRACT; }
-const CONTRACT_BCRT = 'tb1sqqat6q5668ckvr5ger3xyrlp5mtayfegag5m0c39';
-const RPC_URLS = ['https://testnet.opnet.org/api/v1/json-rpc','https://testnet.opnet.org/json-rpc'];
+const CONTRACT_BCRT = 'opt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp';
+const RPC_URLS = ['https://testnet.opnet.org'];
 const MIN_SATS = 10000;
 
 (function isolateEVM() { if (window.ethereum) console.log('[BlockBet] EVM wallet detected — ignored'); })();
