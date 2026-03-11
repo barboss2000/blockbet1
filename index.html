@@ -21,6 +21,7 @@ html,body{height:100%;overflow:hidden;}
 body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:12px;}
 #graffiti-bg{position:fixed;inset:0;pointer-events:none;z-index:0;}
 .app{position:relative;z-index:1;display:flex;flex-direction:column;height:100vh;}
+/* ── HEADER ── */
 .hdr{display:flex;align-items:center;justify-content:space-between;
 padding:8px 18px;border-bottom:1px solid var(--b1);
 background:rgba(5,5,5,.98);backdrop-filter:blur(20px);flex-shrink:0;z-index:200;}
@@ -56,13 +57,16 @@ box-shadow:0 0 6px var(--even);animation:wpulse 2s infinite;flex-shrink:0;}
 padding:6px 10px;border-radius:5px;font-family:'DM Mono',monospace;font-size:10px;
 cursor:pointer;transition:all .2s;display:none;white-space:nowrap;}
 .btn-disc:hover{border-color:var(--odd);color:var(--odd);}
+/* ── STATUS BAR ── */
 .sbar{padding:5px 18px;font-size:10px;display:flex;align-items:center;justify-content:center;
 gap:12px;flex-shrink:0;border-bottom:1px solid;}
 .sbar.ok{background:rgba(74,222,128,.05);border-color:rgba(74,222,128,.12);color:var(--even);}
 .sbar.warn{background:rgba(247,147,26,.06);border-color:rgba(247,147,26,.18);color:var(--btc);}
 .sbar.err{background:rgba(248,113,113,.05);border-color:rgba(248,113,113,.15);color:var(--odd);}
 .sbar code{font-size:9px;opacity:.7;}
+/* ── LAYOUT ── */
 .body{display:grid;grid-template-columns:1fr 420px;flex:1;overflow:hidden;min-height:0;}
+/* Chart */
 .chart-col{display:flex;flex-direction:column;border-right:1px solid var(--b1);overflow:hidden;}
 .chart-hdr{display:flex;align-items:center;justify-content:space-between;padding:8px 14px;
 background:rgba(5,5,5,.92);border-bottom:1px solid rgba(247,147,26,.1);flex-shrink:0;}
@@ -82,10 +86,12 @@ border-bottom:2px solid var(--btc);border-right:2px solid var(--btc);opacity:.35
 border-top:2px solid var(--btc);border-right:2px solid var(--btc);opacity:.35;z-index:3;pointer-events:none;}
 .cbl{position:absolute;bottom:0;left:0;width:46px;height:46px;
 border-bottom:2px solid var(--btc);border-left:2px solid var(--btc);opacity:.35;z-index:3;pointer-events:none;}
+/* Right panel */
 .panel{display:flex;flex-direction:column;overflow-y:auto;
 background:rgba(5,5,5,.7);backdrop-filter:blur(12px);}
 .panel::-webkit-scrollbar{width:3px;}
 .panel::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px;}
+/* Round box */
 .round-box{background:rgba(12,12,12,.98);border-bottom:1px solid var(--b1);padding:12px 14px;flex-shrink:0;}
 .row2{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
 .fld{} .fld-l{font-size:8px;color:var(--m);letter-spacing:1.5px;text-transform:uppercase;}
@@ -113,6 +119,7 @@ text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:12px;}
 .res-ban.ew{background:var(--ed);border:1px solid rgba(74,222,128,.3);color:var(--even);}
 .res-ban.ow{background:var(--od);border:1px solid rgba(248,113,113,.3);color:var(--odd);}
 .res-ban.show{display:block;}
+/* ── AI AGENT ── */
 .ai-box{background:rgba(12,12,12,.98);border-bottom:1px solid var(--b1);padding:10px 14px;flex-shrink:0;}
 .ai-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .ai-title{display:flex;align-items:center;gap:6px;font-size:9px;color:var(--ai);
@@ -149,6 +156,7 @@ padding:6px 9px;background:var(--s2);border:1px solid var(--b1);border-radius:5p
 border-top-color:var(--ai);border-radius:50%;animation:spin .8s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .ai-disabled{text-align:center;padding:8px;color:var(--m);font-size:10px;}
+/* Bet form */
 .bet-form{padding:12px 14px;border-bottom:1px solid var(--b1);flex-shrink:0;}
 .sec-t{font-size:8px;color:var(--m);letter-spacing:2px;text-transform:uppercase;margin-bottom:9px;}
 .amt-wrap{position:relative;margin-bottom:12px;}
@@ -187,6 +195,7 @@ text-align:center;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;}
 .pay-ban.win{background:var(--ed);border:1px solid rgba(74,222,128,.4);color:var(--even);}
 .pay-ban.show{display:block;animation:fup .4s ease;}
 @keyframes fup{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+/* Hash viz */
 .hash-box{padding:10px 14px;border-bottom:1px solid var(--b1);display:none;}
 .hash-t{font-size:8px;color:var(--m);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
 .hash-d{background:var(--s2);border:1px solid var(--b1);border-radius:5px;
@@ -195,6 +204,7 @@ padding:8px 10px;font-size:9px;word-break:break-all;line-height:1.6;color:var(--
 .hash-par{display:flex;align-items:center;justify-content:space-between;margin-top:6px;font-size:10px;}
 .par.even{color:var(--even);font-weight:600;}
 .par.odd{color:var(--odd);font-weight:600;}
+/* How it works */
 .how-box{padding:12px 14px;}
 .how-t{font-size:8px;color:var(--m);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
 .how-steps{display:flex;flex-direction:column;gap:4px;}
@@ -214,6 +224,7 @@ display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:
 <body>
 <canvas id="graffiti-bg"></canvas>
 <div class="app">
+<!-- Header -->
 <header class="hdr">
 <div class="logo">
 <div class="logo-hex">₿</div>
@@ -229,27 +240,31 @@ display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:
 <button class="btn-disc" id="btnDisc" onclick="disconnectWallet()">✕ Disconnect</button>
 </div>
 </header>
+<!-- Status bar -->
 <div class="sbar warn" id="sbar">
-<span>📡 Connecting to OP_NET Testnet...</span>
+<span>&#x1F4E1; Connecting to OP_NET Testnet...</span>
 <code>opt1sqq...hryp</code>
-<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">⚙️ Settings</button>
-<button onclick="inspectWallet()" style="margin-left:4px;background:transparent;border:1px solid #333;color:#555;padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">🔍 API</button>
+<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">&#x2699; Settings</button>
+<button onclick="inspectWallet()" style="margin-left:4px;background:transparent;border:1px solid #333;color:#555;padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">&#x1F50D; API</button>
 </div>
+<!-- Settings modal -->
 <div id="settingsModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;">
 <div style="background:#111;border:1px solid #333;border-radius:12px;padding:24px;width:480px;max-width:95vw;font-family:monospace;">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
 <span style="font-weight:800;font-size:16px;color:var(--btc);">Settings</span>
-<button onclick="hideSettings()" style="background:transparent;border:none;color:#666;font-size:20px;cursor:pointer;">✕</button>
+<button onclick="hideSettings()" style="background:transparent;border:none;color:#666;font-size:20px;cursor:pointer;">&#x2715;</button>
 </div>
 <label style="font-size:10px;color:#666;letter-spacing:1px;text-transform:uppercase;">Contract Address (opt1...)</label>
 <input id="inputContract" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#fff;margin:6px 0 14px;outline:none;box-sizing:border-box;" placeholder="opt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp"/>
 <label style="font-size:10px;color:#666;letter-spacing:1px;text-transform:uppercase;">RPC URL</label>
 <input id="inputRpc" style="width:100%;background:#0a0a0a;border:1px solid #333;border-radius:6px;padding:8px 10px;font-size:11px;color:#fff;margin:6px 0 4px;outline:none;box-sizing:border-box;" placeholder="https://testnet.opnet.org/api/v1/json-rpc"/>
 <div style="font-size:10px;color:#555;margin-bottom:16px;">Variants: https://testnet.opnet.org/api/v1/json-rpc &nbsp;|&nbsp; http://localhost:3000/api/v1/json-rpc</div>
-<button onclick="applySettings()" style="width:100%;background:var(--btc);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Apply & Reload</button>
+<button onclick="applySettings()" style="width:100%;background:var(--btc);color:#000;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;">Apply &amp; Reload</button>
 </div>
 </div>
+<!-- Body -->
 <div class="body">
+<!-- Chart -->
 <div class="chart-col">
 <div class="chart-hdr">
 <div class="chart-sym"><span style="color:var(--btc);font-size:18px;">₿</span> BTC/USDT</div>
@@ -263,7 +278,9 @@ display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:
 <div class="ctr"></div><div class="cbl"></div>
 </div>
 </div>
+<!-- Panel -->
 <div class="panel">
+<!-- Round -->
 <div class="round-box">
 <div class="row2">
 <div class="fld"><div class="fld-l">Round</div><div class="fld-v" id="roundId">—</div></div>
@@ -296,6 +313,7 @@ display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:
 </div>
 <div class="res-ban" id="resBan"></div>
 </div>
+<!-- AI Agent -->
 <div class="ai-box" id="aiBox">
 <div class="ai-hdr">
 <div class="ai-title"><div class="ai-dot"></div>AI Prediction Agent</div>
@@ -343,6 +361,7 @@ AI Agent disabled — click ON to enable predictions
 </div>
 </div>
 </div>
+<!-- Hash viz -->
 <div class="hash-box" id="hashBox">
 <div class="hash-t">Winning Block Hash · Last Nibble</div>
 <div class="hash-d" id="hashD">—</div>
@@ -351,6 +370,7 @@ AI Agent disabled — click ON to enable predictions
 <span class="par" id="hashPar">—</span>
 </div>
 </div>
+<!-- Bet form -->
 <div class="bet-form">
 <div class="sec-t">Place your bet</div>
 <div class="amt-wrap">
@@ -372,6 +392,7 @@ ODD<span class="bsub">1,3,5,7,9,b,d,f</span>
 <button class="act a-wd"     id="btnWd"     onclick="doWithdraw()">⬇ Withdraw BTC</button>
 <button class="act a-new"    id="btnNew"    onclick="doNewRound()">▶ Start New Round</button>
 </div>
+<!-- How it works -->
 <div class="how-box">
 <div class="how-t">How it works</div>
 <div class="how-steps">
@@ -381,30 +402,36 @@ ODD<span class="bsub">1,3,5,7,9,b,d,f</span>
 </div>
 </div>
 </div>
-</div>
-</div>
+</div><!-- body -->
+</div><!-- app -->
 <script>
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
 const CONTRACT = 'opt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp';
+// Runtime override: if user changes contract via Settings, this returns new value
 function getContract() { return window._contractOverride || CONTRACT; }
-const CONTRACT_BCRT = 'bcrt1sqqpzxuet8963842vd56rmt3jaa4cr3fj5vr0hryp';
+// bcrt1 equivalent (same witness program, different HRP)
+const CONTRACT_BCRT = 'tb1sqqat6q5668ckvr5ger3xyrlp5mtayfegag5m0c39';
+// RPC endpoints — first working one is used automatically
+// Edit RPC directly in the UI (gear icon) or change here
 const RPC_URLS = [
 'https://testnet.opnet.org/api/v1/json-rpc',
 'https://testnet.opnet.org/json-rpc',
 ];
 const MIN_SATS = 10000;
-
+// ─── METAMASK ISOLATION ───────────────────────────────────────────────────────
+// We ONLY use window.opnet — MetaMask/EVM wallets are completely ignored
 (function isolateEVM() {
 if (window.ethereum) {
 console.log('[BlockBet] EVM wallet detected — ignored, using OPWallet only');
 }
 })();
-
+// Get OPWallet safely (never touches ethereum)
 function getOPWallet() {
 if (window.opnet) return window.opnet;
 if (window.unisat && window.unisat.opnet) return window.unisat.opnet;
 return null;
 }
-
+// ─── STATE ────────────────────────────────────────────────────────────────────
 let wallet      = null;
 let opnetAddr   = null;
 let round       = null;
@@ -415,7 +442,7 @@ let aiOn        = true;
 let aiTimer     = null;
 let lastPrice   = null;
 let workingRpc  = null;
-
+// ─── ENCODING ─────────────────────────────────────────────────────────────────
 const toHex = b => Array.from(b).map(x => x.toString(16).padStart(2,'0')).join('');
 function fromHex(h) {
 h = h.startsWith('0x') ? h.slice(2) : h;
@@ -439,14 +466,14 @@ let h = 0x811c9dc5;
 for (let i = 0; i < sig.length; i++) { h ^= sig.charCodeAt(i); h = (Math.imul(h, 0x01000193) >>> 0); }
 const b = new Uint8Array(4); new DataView(b.buffer).setUint32(0, h, true); return b;
 }
-const mkCall = (sig, ...args) => cat(fnvSel(sig), ...args);
-const mkCallHex = (sig, ...args) => toHex(mkCall(sig, ...args));
+const mkCall = (sig, ...args) => cat(fnvSel(sig), ...args); // returns Uint8Array
+const mkCallHex = (sig, ...args) => toHex(mkCall(sig, ...args)); // hex for RPC reads
 const s2btc  = s => (Number(s) / 1e8).toFixed(8).replace(/\.?0+$/, '') || '0';
 async function sha256hex(hex) {
 const h = await crypto.subtle.digest('SHA-256', fromHex(hex).buffer);
 return new Uint8Array(h);
 }
-
+// ─── DECODER ──────────────────────────────────────────────────────────────────
 class D {
 constructor(h) { const b = fromHex(h); this.v = new DataView(b.buffer); this.o = 0; }
 bool()  { return this.v.getUint8(this.o++) !== 0; }
@@ -467,19 +494,21 @@ currentBlock: d.u256(), winningBlock: d.u256(),
 };
 const decBet     = h => { const d = new D(h); return { even: d.u256(), odd: d.u256(), claimed: d.bool() }; };
 const decPending = h => new D(h).u256();
-
+// ─── RPC READ ─────────────────────────────────────────────────────────────────
 async function rpcRead(sig, args = [], from = null) {
 const cd  = mkCallHex(sig, ...args);
 const addr = window._contractOverride || getContract();
 
+// ── Method 1: Use OPWallet provider (BEST - avoids CORS) ──────────────────
 if (window.opnet?.provider?.call) {
 try {
+console.log('[RPC] Trying opnet.provider.call...');
 const result = await window.opnet.provider.call({
 to: addr,
 data: cd,
 });
 const d = (result || '').replace(/^0x/, '');
-console.log('[RPC opnet.provider] len=', d.length);
+console.log('[RPC opnet.provider] SUCCESS len=', d.length);
 workingRpc = '__opnet_provider__';
 return d;
 } catch(e) {
@@ -487,12 +516,14 @@ console.warn('[RPC opnet.provider failed]', e.message);
 }
 }
 
+// ── Method 2: OPWallet callReadOnly / readContract ──────────────────────────
 if (window.opnet?.callReadOnly || window.opnet?.readContract) {
 try {
+console.log('[RPC] Trying opnet.callReadOnly...');
 const fn = window.opnet.callReadOnly || window.opnet.readContract;
 const result = await fn({ to: addr, data: cd });
 const d = (result?.result || result?.data || result || '').toString().replace(/^0x/, '');
-console.log('[RPC callReadOnly] len=', d.length);
+console.log('[RPC callReadOnly] SUCCESS len=', d.length);
 workingRpc = '__opnet_callReadOnly__';
 return d;
 } catch(e) {
@@ -500,6 +531,7 @@ console.warn('[RPC callReadOnly failed]', e.message);
 }
 }
 
+// ── Method 3: Direct fetch with CORS proxy fallback ─────────────────────────
 const baseAddr = addr;
 const addrs = [baseAddr, CONTRACT_BCRT];
 const frm = from || wallet?.address || null;
@@ -509,59 +541,100 @@ if (frm) paramSets.push([a, cd, frm]);
 paramSets.push([a, cd]);
 }
 
-const directUrls = workingRpc && workingRpc !== '__opnet_provider__' && workingRpc !== '__opnet_callReadOnly__'
+// Try CORS proxies if direct fetch fails
+const proxies = [
+'', // Direct first
+'https://api.allorigins.win/raw?url=',
+'https://cors.bridged.cc/',
+'https://corsproxy.io/?',
+];
+
+const directUrls = workingRpc && !workingRpc.startsWith('__') 
 ? [workingRpc, ...RPC_URLS.filter(u => u !== workingRpc)]
 : RPC_URLS;
 
 let lastErr = new Error('All RPC endpoints failed');
+
+for (const proxy of proxies) {
 for (const url of directUrls) {
+const fullUrl = proxy ? proxy + encodeURIComponent(url) : url;
+
 for (const params of paramSets) {
 try {
-const resp = await fetch(url, {
+console.log(`[RPC] Trying ${fullUrl.slice(0,60)}...`);
+
+const resp = await fetch(fullUrl, {
 method: 'POST',
-headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'btc_call', params }),
-signal: AbortSignal.timeout(8000),
+headers: { 
+'Content-Type': 'application/json',
+'Origin': 'https://blockbet1.vercel.app',
+},
+body: JSON.stringify({ 
+jsonrpc: '2.0', 
+id: 1, 
+method: 'btc_call', 
+params 
+}),
+signal: AbortSignal.timeout(10000),
 });
-if (!resp.ok) { lastErr = new Error('HTTP ' + resp.status); continue; }
+
+if (!resp.ok) { 
+console.warn('[RPC] HTTP error:', resp.status);
+lastErr = new Error('HTTP ' + resp.status); 
+continue; 
+}
+
 const j = await resp.json();
+
 if (j.error) {
 const msg = typeof j.error === 'object' ? j.error.message : String(j.error);
-console.warn('[RPC ERR]', sig, url, msg);
+console.warn('[RPC ERR]', sig, msg);
 lastErr = new Error(msg);
 continue;
 }
+
 let d = '';
 if (typeof j.result === 'string') d = j.result;
 else if (j.result?.result) d = j.result.result;
 else if (j.result?.data)   d = j.result.data;
 d = d.replace(/^0x/, '');
+
 if (!d) {
-console.warn('[RPC EMPTY]', sig, 'addr=' + params[0]);
+console.warn('[RPC EMPTY]', sig);
 } else {
-console.log('[RPC OK]', sig, 'via', url.slice(0,40), 'len=', d.length);
+console.log('[RPC SUCCESS] via', proxy || 'direct', 'len=', d.length);
 workingRpc = url;
 }
 return d;
-} catch(e) { lastErr = e; console.warn('[RPC FAIL]', url.slice(0,50), e.message); }
+
+} catch(e) { 
+console.warn('[RPC FAIL]', fullUrl.slice(0,50), e.message);
+lastErr = e;
 }
 }
-throw lastErr;
+}
 }
 
+throw lastErr;
+}
+// RPC WRITE
 async function rpcWrite(sig, args = [], sats = 0) {
 const opw = getOPWallet();
 if (!opw) throw new Error("OPWallet not found");
 const calldataBytes = mkCall(sig, ...args);
 const contract = getContract();
-
+// Точный формат из перехвата реального вызова signInteraction в OP-Sign:
+// { contract, calldata (Uint8Array), priorityFee: "0", gasSatFee: "880", feeRate: 10, to, from, utxos, network, optionalInputs, optionalOutputs }
+// НО: мы передаём только то что нужно — остальное (utxos, network, from) wallet добавляет сам через queryContractInformation
+// Ключевые поля: to = адрес контракта, calldata = Uint8Array, priorityFee = "0", feeRate = 10
 const params = {
 to: contract,
-calldata: calldataBytes,
+calldata: calldataBytes,  // Uint8Array — wallet сам конвертирует через функцию t()
 priorityFee: "0",
 feeRate: 10,
 };
-
+// Попробуем сначала signInteraction (именно его использует OP-Sign)
+// затем signAndBroadcastInteraction как запасной
 const methods = ["signInteraction", "signAndBroadcastInteraction"];
 let lastErr = new Error("All methods failed");
 for (const m of methods) {
@@ -581,7 +654,7 @@ if (msg.includes("reject") || msg.includes("denied") || msg.includes("cancel")) 
 }
 throw lastErr;
 }
-
+// ─── WALLET ───────────────────────────────────────────────────────────────────
 async function connectWallet() {
 const opw = getOPWallet();
 if (!opw) {
@@ -597,17 +670,18 @@ opw.getPublicKey(),
 ]);
 if (!addrs?.length) throw new Error('No accounts');
 const addr = addrs[0];
+// ── Network check: must be Testnet (opt1... addresses)
+// Regtest addresses start with bcrt1 or opr1, Testnet with tb1 or opt1
 const isTestnet = addr.startsWith('tb1') || addr.startsWith('opt1');
 const isRegtest = addr.startsWith('bcrt1') || addr.startsWith('opr1') || addr.startsWith('bcrt');
 console.log('[connectWallet] addr=', addr, 'isTestnet=', isTestnet, 'isRegtest=', isRegtest);
-
+// Also try getNetwork() if available
 let networkName = '';
 try {
 const net = await opw.getNetwork();
 networkName = (net?.network || net || '').toLowerCase();
 console.log('[connectWallet] network=', networkName);
 } catch(e) { console.log('getNetwork not available'); }
-
 const onWrongNetwork = isRegtest || networkName.includes('regtest') || networkName.includes('mainnet');
 if (onWrongNetwork) {
 btn.innerText = 'Connect OPWallet'; btn.disabled = false; btn.onclick = connectWallet;
@@ -630,7 +704,6 @@ btn.innerText = 'Connect OPWallet'; btn.disabled = false; btn.onclick = connectW
 alert('Connection failed: ' + e.message);
 }
 }
-
 function disconnectWallet() {
 wallet = null; opnetAddr = null; round = null; myBet = null; myPending = 0n;
 const btn = document.getElementById('btnConn');
@@ -641,7 +714,6 @@ document.getElementById('walletBal').innerText  = '— tBTC';
 document.getElementById('myBet').innerText = '—';
 hideAll(); setSync();
 }
-
 async function fetchBalance() {
 if (!wallet) return;
 const opw = getOPWallet();
@@ -675,13 +747,13 @@ document.getElementById('walletBal').innerText = sats !== null && sats >= 0n ? s
 document.getElementById('walletBal').innerText = '— tBTC';
 }
 }
-
+// ─── DATA ─────────────────────────────────────────────────────────────────────
 async function refreshRound() {
 setHint('⏳ Loading contract...', 'var(--m)');
 try {
 const hex = await rpcRead('getRoundInfo()');
 if (!hex || hex.length < 64) {
-setSbar(false, 'Contract not initialized (len=' + (hex?.length ?? 0) + ')');
+setSbar(false, 'Empty response (len=' + (hex?.length ?? 0) + ')');
 setHint('▶ Contract ready — press "Start First Round" to begin!', 'var(--btc)');
 show('btnNew');
 const btnNew = document.getElementById('btnNew');
@@ -703,7 +775,6 @@ setSbar(false, e.message);
 setHint('❌ ' + e.message.slice(0,60), 'var(--odd)');
 }
 }
-
 async function refreshMyBet() {
 if (!opnetAddr || !wallet) return;
 try {
@@ -721,7 +792,7 @@ document.getElementById('myBet').innerText = tot > 0n
 updateActBtns(); updateBtns(); fetchBalance();
 } catch(e) { console.warn('refreshMyBet:', e.message); }
 }
-
+// ─── AI AGENT ─────────────────────────────────────────────────────────────────
 function toggleAI() {
 aiOn = !aiOn;
 const btn = document.getElementById('aiToggle');
@@ -733,7 +804,6 @@ document.getElementById('aiOff').style.display      = aiOn ? 'none' : 'block';
 if (aiTimer) clearTimeout(aiTimer);
 if (aiOn) runAI();
 }
-
 function runAI() {
 if (!aiOn) return;
 document.getElementById('aiThinking').style.display = 'flex';
@@ -741,7 +811,6 @@ document.getElementById('aiResult').style.display   = 'none';
 document.getElementById('aiOff').style.display      = 'none';
 setTimeout(computeAI, 900 + Math.random() * 700);
 }
-
 function computeAI() {
 if (!aiOn) return;
 const ep  = round ? Number(round.evenPool) : 0;
@@ -783,24 +852,22 @@ document.getElementById('aiResult').style.display   = 'flex';
 if (aiTimer) clearTimeout(aiTimer);
 aiTimer = setTimeout(runAI, 30000);
 }
-
+// ─── UI ───────────────────────────────────────────────────────────────────────
 function setHint(txt, color) {
 const h = document.getElementById('betHint'); h.innerText = txt; h.style.color = color;
 }
-
 function setSbar(ok, err) {
 const el = document.getElementById('sbar');
 if (ok) {
 el.className = 'sbar ok';
 el.innerHTML = '<span>🟢 OP_NET Testnet · Contract live</span><code>' + CONTRACT.slice(0,7) + '...' + CONTRACT.slice(-4) + '</code>' +
-'<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">⚙️ Settings</button>';
+'<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">&#x2699; Settings</button>';
 } else {
 el.className = 'sbar err';
 el.innerHTML = '<span>⚠️ ' + (err || 'RPC error').slice(0,70) + '</span>' +
-'<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">⚙️ Settings</button>';
+'<button onclick="showSettings()" style="margin-left:auto;background:transparent;border:1px solid rgba(247,147,26,0.4);color:var(--btc);padding:2px 8px;border-radius:4px;font-size:10px;cursor:pointer;font-family:inherit">&#x2699; Settings</button>';
 }
 }
-
 function setSync() {
 ['roundId','targetBlock'].forEach(id => document.getElementById(id).innerText = '—');
 document.getElementById('curBlock').innerText  = '—';
@@ -810,7 +877,6 @@ document.getElementById('poolPct').innerText   = '50%';
 document.getElementById('poolBar').style.width = '50%';
 setPill('CONNECTING', 'p-sync');
 }
-
 function setPill(t, c) { const e = document.getElementById('pill'); e.innerText = t; e.className = 'pill ' + c; }
 function show(id) { const e = document.getElementById(id); if(e) { e.style.display = 'block'; e.disabled = false; } }
 function hide(id) { const e = document.getElementById(id); if(e) e.style.display = 'none'; }
@@ -828,7 +894,6 @@ const p = document.getElementById('hashPar');
 p.innerHTML = ew ? '🟢 EVEN (' + n + ' = 12)' : '🔴 ODD (' + n + ' = 9)';
 p.className = 'par ' + (ew ? 'even' : 'odd');
 }
-
 function updateRoundUI() {
 if (!round) { setSync(); return; }
 document.getElementById('roundId').innerText     = '#' + round.roundId.toString();
@@ -856,7 +921,6 @@ setPill('OPEN','p-open'); ban.className = 'res-ban';
 }
 updateActBtns(); updateBtns(); if (aiOn) runAI();
 }
-
 function updateActBtns() {
 if (!round || !myBet || !round.settled) return;
 const tot  = myBet.even + myBet.odd;
@@ -867,7 +931,6 @@ document.getElementById('btnWd').innerText = '⬇ Withdraw ' + s2btc(myPending) 
 show('btnWd');
 }
 }
-
 function updateBtns() {
 const cur   = Number(round?.currentBlock || 0);
 const tgt   = Number(round?.targetBlock  || 0);
@@ -882,12 +945,12 @@ if (!noBet)                { setHint('✓ Bet placed — awaiting block #' + tgt
 if (cur >= tgt && tgt > 0) { setHint('⛏ Target mined — settle now!', 'var(--btc)'); return; }
 setHint('Min: 10,000 sats · Target block #' + tgt.toLocaleString(), 'var(--m)');
 }
-
+// Helper: is this a user-rejected error?
 function isUserReject(e) {
 const m = (e?.message || String(e)).toLowerCase();
 return m.includes('reject') || m.includes('denied') || m.includes('cancel');
 }
-
+// ACTIONS
 async function placeBet(isEven) {
 if (!wallet) { alert('Connect OPWallet first'); return; }
 if (isBusy) return;
@@ -904,7 +967,6 @@ if (isUserReject(e)) setHint('Cancelled', 'var(--m)');
 else setHint('Error: ' + (e.message || 'Failed'), 'var(--odd)');
 } finally { isBusy = false; updateBtns(); }
 }
-
 async function doSettle() {
 const b = document.getElementById('btnSettle');
 if (b.disabled) return;
@@ -912,7 +974,6 @@ b.disabled = true; b.innerText = 'Confirm in OPWallet...';
 try { await rpcWrite('settle()', [], 0); setTimeout(refreshRound, 8000); }
 catch(e) { b.disabled = false; b.innerText = 'Settle Round'; if (!isUserReject(e)) alert('Failed: ' + e.message); }
 }
-
 async function doClaim() {
 const b = document.getElementById('btnClaim');
 if (b.disabled) return;
@@ -924,7 +985,6 @@ pb.className = 'pay-ban win show'; pb.innerHTML = 'Claimed! Press Withdraw to re
 hide('btnClaim'); setTimeout(() => { refreshRound(); refreshMyBet(); }, 8000);
 } catch(e) { b.disabled = false; b.innerText = 'Claim Winnings'; if (!isUserReject(e)) alert('Failed: ' + e.message); }
 }
-
 async function doWithdraw() {
 const b = document.getElementById('btnWd');
 if (b.disabled) return;
@@ -936,7 +996,6 @@ pb.className = 'pay-ban win show'; pb.innerHTML = s2btc(myPending) + ' BTC sent!
 myPending = 0n; hide('btnWd'); fetchBalance(); setTimeout(refreshMyBet, 8000);
 } catch(e) { b.disabled = false; if (!isUserReject(e)) alert('Failed: ' + e.message); }
 }
-
 async function inspectWallet() {
 const opw = getOPWallet();
 if (!opw) { alert('OPWallet not found'); return; }
@@ -945,7 +1004,6 @@ const props   = Object.keys(opw).filter(k => typeof opw[k] !== 'function');
 const msg = 'Methods:\n' + methods.join(', ') + '\nProperties:\n' + props.join(', ');
 console.log(msg); alert(msg);
 }
-
 let _newRoundBusy = false;
 async function doNewRound() {
 if (_newRoundBusy) return;
@@ -981,7 +1039,7 @@ if (!isUserReject(e)) alert('Failed:\n' + (e.message || String(e)));
 else setHint('Cancelled - press button again to retry', 'var(--m)');
 }
 }
-
+// ─── PRICE ───────────────────────────────────────────────────────────────────
 function startPriceWS() {
 const ws = new WebSocket('wss://stream.binance.com:9443/stream?streams=btcusdt@ticker');
 ws.onmessage = e => {
@@ -997,7 +1055,7 @@ let wsRetryDelay = 3000;
 ws.onclose = () => { setTimeout(startPriceWS, wsRetryDelay); wsRetryDelay = Math.min(wsRetryDelay * 1.5, 30000); };
 ws.onerror = () => ws.close();
 }
-
+// ─── TRADINGVIEW ──────────────────────────────────────────────────────────────
 new TradingView.widget({
 container_id: 'tv_chart', symbol: 'BINANCE:BTCUSDT', interval: '1',
 theme: 'dark', width: '100%', height: '100%', autosize: true,
@@ -1010,18 +1068,16 @@ overrides: {
 },
 loading_screen: { backgroundColor: "#080d08", foregroundColor: "#f7931a" },
 });
-
+// ─── SETTINGS ────────────────────────────────────────────────────────────────
 function showSettings() {
 const m = document.getElementById('settingsModal');
 document.getElementById('inputContract').value = window._contractOverride || getContract();
 document.getElementById('inputRpc').value = workingRpc || RPC_URLS[0];
 m.style.display = 'flex';
 }
-
 function hideSettings() {
 document.getElementById('settingsModal').style.display = 'none';
 }
-
 function applySettings() {
 const newContract = document.getElementById('inputContract').value.trim();
 const newRpc      = document.getElementById('inputRpc').value.trim();
@@ -1036,15 +1092,15 @@ hideSettings();
 round = null; myBet = null;
 refreshRound();
 }
-
+// Allow clicking outside modal to close
 document.getElementById('settingsModal').addEventListener('click', function(e) {
 if (e.target === this) hideSettings();
 });
-
+// ─── INIT ────────────────────────────────────────────────────────────────────
 startPriceWS(); setSync(); refreshRound();
 setInterval(refreshRound, 15000);
 setInterval(() => { if (wallet) fetchBalance(); }, 60000);
-
+// Session restore — retry until OPWallet injects window.opnet
 function tryRestoreSession(attempts) {
 attempts = attempts || 0;
 const opw = getOPWallet();
@@ -1071,9 +1127,8 @@ opw.on && opw.on('disconnect', disconnectWallet);
 } catch(e) { console.warn('restore:', e.message); }
 }).catch(function() {});
 }
-
 window.addEventListener('load', function() { tryRestoreSession(0); });
-
+// ─── Graffiti background ──────────────────────────────────────────────────────
 (function() {
 const canvas = document.getElementById('graffiti-bg');
 const ctx = canvas.getContext('2d');
@@ -1088,6 +1143,7 @@ draw();
 }
 function randInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
 function rand(min, max) { return Math.random() * (max - min) + min; }
+// Seeded random so it's consistent per session
 let seed = 42;
 function srnd() {
 seed = (seed * 16807 + 0) % 2147483647;
@@ -1115,23 +1171,29 @@ function drawGraffitiLetter(ctx, x, y, letter, size, color, angle = 0) {
 ctx.save();
 ctx.translate(x, y);
 ctx.rotate(angle);
+// Outline / drip effect
 ctx.font = `900 ${size}px 'Syne', sans-serif`;
 ctx.textAlign = 'center';
 ctx.textBaseline = 'middle';
+// Spray halo
 drawSprayPaint(ctx, 0, 0, size * 0.7, color, 80);
+// Shadow layers for depth
 ctx.shadowColor = color;
 ctx.shadowBlur = size * 0.3;
 ctx.globalAlpha = 0.06;
 ctx.fillStyle = color;
 ctx.fillText(letter, 3, 6);
+// Outline stroke
 ctx.globalAlpha = 0.18;
 ctx.strokeStyle = color;
 ctx.lineWidth = size * 0.08;
 ctx.lineJoin = 'round';
 ctx.strokeText(letter, 0, 0);
+// Fill
 ctx.globalAlpha = 0.09;
 ctx.fillStyle = color;
 ctx.fillText(letter, 0, 0);
+// Drip
 const dripCount = srandInt(1, 3);
 for (let d = 0; d < dripCount; d++) {
 const dx = srand(-size * 0.3, size * 0.3);
@@ -1149,6 +1211,7 @@ dx + srand(-8, 8), size * 0.5 + dripLen * 0.7,
 dx + srand(-4, 4), size * 0.4 + dripLen
 );
 ctx.stroke();
+// Drip end blob
 ctx.globalAlpha = 0.1;
 ctx.beginPath();
 ctx.arc(dx + srand(-4,4), size * 0.4 + dripLen, dripW * 1.5, 0, Math.PI * 2);
@@ -1157,7 +1220,7 @@ ctx.fill();
 }
 ctx.restore();
 }
-function drawTag(ctx, x, y, text, size, skew = 0) {
+function drawTag(ctx, x, y, text, size, color, skew = 0) {
 ctx.save();
 ctx.translate(x, y);
 ctx.transform(1, 0, skew, 1, 0, 0);
@@ -1166,7 +1229,7 @@ let ox = 0;
 for (const l of letters) {
 const angle = srand(-0.15, 0.15);
 const vertJitter = srand(-size * 0.15, size * 0.15);
-drawGraffitiLetter(ctx, ox, vertJitter, l, size, NEON, angle);
+drawGraffitiLetter(ctx, ox, vertJitter, l, size, color, angle);
 ox += size * srand(0.55, 0.72);
 }
 ctx.restore();
@@ -1197,6 +1260,7 @@ ctx.lineCap = 'round';
 ctx.shadowColor = color;
 ctx.shadowBlur = 10;
 ctx.beginPath();
+// Arrow up
 ctx.moveTo(0, size * 0.5);
 ctx.lineTo(0, -size * 0.5);
 ctx.moveTo(-size * 0.3, -size * 0.2);
@@ -1228,8 +1292,9 @@ ctx.restore();
 function draw() {
 const W = canvas.width;
 const H = canvas.height;
-seed = 42;
+seed = 42; // reset seed for consistent render
 ctx.clearRect(0, 0, W, H);
+// ── Base: deep dark gradient (not pure black) ──
 const bgGrad = ctx.createLinearGradient(0, 0, W, H);
 bgGrad.addColorStop(0,   '#0d1a0a');
 bgGrad.addColorStop(0.3, '#0a0f1a');
@@ -1237,6 +1302,7 @@ bgGrad.addColorStop(0.6, '#130d1f');
 bgGrad.addColorStop(1,   '#0a1410');
 ctx.fillStyle = bgGrad;
 ctx.fillRect(0, 0, W, H);
+// ── Ink splat blobs — big color explosions ──
 const blobs = [
 { x: W*0.08,  y: H*0.15, r: W*0.22, c: 'rgba(247,147,26,',  a: 0.13 },
 { x: W*0.85,  y: H*0.75, r: W*0.28, c: 'rgba(247,147,26,',  a: 0.10 },
@@ -1248,6 +1314,7 @@ const blobs = [
 { x: W*0.75,  y: H*0.45, r: W*0.16, c: 'rgba(74,222,128,',  a: 0.08 },
 ];
 for (const b of blobs) {
+// Radial splat
 const g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
 g.addColorStop(0,   b.c + (b.a * 2.5) + ')');
 g.addColorStop(0.4, b.c + b.a + ')');
@@ -1258,6 +1325,7 @@ ctx.fillStyle = g;
 ctx.beginPath();
 ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
 ctx.fill();
+// Splatter droplets around blob
 const color = b.c + (b.a * 3) + ')';
 for (let s = 0; s < 18; s++) {
 const angle = srnd() * Math.PI * 2;
@@ -1268,6 +1336,7 @@ const sr2 = srand(2, b.r * 0.12);
 ctx.globalAlpha = srand(0.05, 0.18);
 ctx.fillStyle = b.c + (b.a * 4) + ')';
 ctx.beginPath();
+// Elongated splat drop
 ctx.save();
 ctx.translate(sx, sy);
 ctx.rotate(angle + Math.PI/2);
@@ -1276,6 +1345,7 @@ ctx.restore();
 ctx.fill();
 }
 }
+// ── Spray strokes — wide brush marks ──
 const strokes = [
 { x1: W*0.0,  y1: H*0.3,  x2: W*0.4,  y2: H*0.15, c: NEON,            w: 80 },
 { x1: W*0.6,  y1: H*0.85, x2: W*1.0,  y2: H*0.65, c: NEON2,           w: 60 },
@@ -1303,37 +1373,48 @@ ctx.quadraticCurveTo(mx, my, s.x2, s.y2);
 ctx.stroke();
 ctx.shadowBlur = 0;
 }
+// ── Concrete texture: noise ──
 for (let i = 0; i < 4000; i++) {
 ctx.globalAlpha = srand(0.01, 0.05);
 ctx.fillStyle = srnd() > 0.6 ? '#ffffff' : (srnd() > 0.5 ? NEON : '#333');
 const px = srnd() * W, py = srnd() * H;
 ctx.fillRect(px, py, srand(0.5, 2), srand(0.5, 2));
 }
-drawTag(ctx, W * 0.02, H * 0.18, 'BLOCKBET', Math.min(W * 0.075, 90), -0.05);
-drawTag(ctx, W * 0.55, H * 0.72, 'OPNET', Math.min(W * 0.065, 80), 0.04);
-drawTag(ctx, W * 0.05, H * 0.82, 'BTC', Math.min(W * 0.1, 120), -0.08);
-drawTag(ctx, W * 0.6, H * 0.12, 'BITCOIN', Math.min(W * 0.055, 70), 0.06);
-drawTag(ctx, W * 0.3, H * 0.45, 'WIN', Math.min(W * 0.12, 140), -0.03);
-drawTag(ctx, W * 0.7, H * 0.38, '0xCHAIN', Math.min(W * 0.045, 55), 0.03);
-drawTag(ctx, W * 0.15, H * 0.6, 'UP', Math.min(W * 0.09, 110), 0.05);
-drawTag(ctx, W * 0.75, H * 0.6, 'DOWN', Math.min(W * 0.07, 85), -0.04);
+// Big background tags - words scattered
+const words = ['BLOCKBET', 'UP', 'DOWN', 'BTC', 'BITCOIN', 'WIN', 'CHAIN', '0x'];
+const colors = [NEON, NEON2, 'rgba(255,255,255,0.6)', NEON];
+// Large background word
+drawTag(ctx, W * 0.02, H * 0.18, 'BLOCKBET', Math.min(W * 0.075, 90), NEON, -0.05);
+drawTag(ctx, W * 0.55, H * 0.72, 'OPNET', Math.min(W * 0.065, 80), NEON2, 0.04);
+drawTag(ctx, W * 0.05, H * 0.82, 'BTC', Math.min(W * 0.1, 120), NEON, -0.08);
+drawTag(ctx, W * 0.6, H * 0.12, 'BITCOIN', Math.min(W * 0.055, 70), 'rgba(255,255,255,0.5)', 0.06);
+drawTag(ctx, W * 0.3, H * 0.45, 'WIN', Math.min(W * 0.12, 140), NEON2, -0.03);
+drawTag(ctx, W * 0.7, H * 0.38, '0xCHAIN', Math.min(W * 0.045, 55), NEON, 0.03);
+drawTag(ctx, W * 0.15, H * 0.6, 'UP', Math.min(W * 0.09, 110), NEON, 0.05);
+drawTag(ctx, W * 0.75, H * 0.6, 'DOWN', Math.min(W * 0.07, 85), '#f87171', -0.04);
+// Hexagons (blockchain motif)
 for (let i = 0; i < 18; i++) {
 drawHexagon(ctx, srnd() * W, srnd() * H, srand(20, 90), i % 3 === 0 ? NEON : NEON2);
 }
+// Arrows (UP / DOWN arrows)
 for (let i = 0; i < 12; i++) {
 drawArrow(ctx, srnd() * W, srnd() * H, srand(30, 80), srnd() > 0.5 ? NEON : '#f87171');
 }
+// Scratchy tag lines
 for (let i = 0; i < 25; i++) {
 const x1 = srnd() * W, y1 = srnd() * H;
 const x2 = x1 + srand(-200, 200), y2 = y1 + srand(-80, 80);
 drawLine(ctx, x1, y1, x2, y2, srnd() > 0.7 ? NEON : 'rgba(255,255,255,0.3)', srand(0.5, 3), srand(0.02, 0.07));
 }
+// Spray circles (random spots)
 for (let i = 0; i < 20; i++) {
 drawSprayPaint(ctx, srnd() * W, srnd() * H, srand(30, 120), srnd() > 0.5 ? NEON : NEON2, 40);
 }
+// Semi-transparent dark overlay so UI stays readable
 ctx.globalAlpha = 0.55;
 ctx.fillStyle = '#080808';
 ctx.fillRect(0, 0, W, H);
+// Vignette edges
 const vignette = ctx.createRadialGradient(W/2, H/2, H*0.2, W/2, H/2, H);
 vignette.addColorStop(0,   'rgba(0,0,0,0)');
 vignette.addColorStop(0.7, 'rgba(0,0,0,0.2)');
@@ -1343,6 +1424,7 @@ ctx.fillStyle = vignette;
 ctx.fillRect(0, 0, W, H);
 }
 window.addEventListener('resize', resize);
+// Wait for Syne font to load for text rendering
 document.fonts.ready.then(resize);
 resize();
 })();
