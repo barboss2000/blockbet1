@@ -376,9 +376,12 @@ ODD<span class="bsub">1,3,5,7,9,b,d,f</span>
 </div>
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
+// ✅ ПРАВИЛЬНЫЙ КОНТРАКТ ИЗ OP-SIGN GITHUB
 const CONTRACT = 'opt1sqr4hgwx39vyjdvcqqlaqpwsuz7r6qsfrwq7esucf';
 function getContract() { return window._contractOverride || CONTRACT; }
 const CONTRACT_BCRT = 'opt1sqr4hgwx39vyjdvcqqlaqpwsuz7r6qsfrwq7esucf';
+
+// ✅ ПРАВИЛЬНЫЙ RPC ИЗ OP-SIGN GITHUB (без /api/v1/json-rpc!)
 const RPC_URLS = ['https://testnet.opnet.org'];
 const MIN_SATS = 10000;
 
