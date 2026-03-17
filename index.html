@@ -11,8 +11,6 @@
 <meta name="twitter:description" content="Predict crypto price direction in real time. Play on Robinhood Chain."/>
 <meta name="twitter:image" content="https://blockoracle-evm.vercel.app/preview.png"/>
 <meta charset="UTF-8"/>
-<!-- SECURITY: Content Security Policy -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://s3.tradingview.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.binance.com https://api.coingecko.com https://testnet.chain.robinhood.com https://rpc.testnet.arc.network wss://stream.binance.com:9443; img-src 'self' data: https:;"/>
 <link rel="icon" type="image/png" href="data:image/png;base64,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"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>BlockOracle — Robinhood Chain</title>
@@ -34,8 +32,8 @@ body{background:#0d1a0a;color:var(--text);font-family:'DM Mono',monospace;min-he
 .page{position:relative;z-index:1;display:flex;flex-direction:column;height:100vh;}
 .header{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;border-bottom:1px solid var(--border);background:rgba(10,10,10,0.96);backdrop-filter:blur(12px);z-index:100;flex-shrink:0;}
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
-.logo-img{width:32px;height:32px;border-radius:50%;object-fit:cover;filter:drop-shadow(0 0 8px rgba(213,253,81,0.3));transition:all 0.3s;}
-.logo-img:hover{filter:drop-shadow(0 0 12px rgba(213,253,81,0.5));transform:scale(1.05);}
+.logo-icon{width:26px;height:26px;background:var(--neon);clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);animation:pulse-logo 3s ease-in-out infinite;}
+@keyframes pulse-logo{0%,100%{filter:brightness(1);}50%{filter:brightness(1.3) drop-shadow(0 0 8px #d5fd51);}}
 .logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;letter-spacing:-0.5px;}
 .logo-text span{color:var(--neon);}
 .header-right{display:flex;align-items:center;gap:12px;flex-shrink:0;margin-left:auto;}
@@ -275,7 +273,7 @@ body{background:#0d1a0a;color:var(--text);font-family:'DM Mono',monospace;min-he
 <div class="page">
 <header class="header">
 <div class="logo">
-<img src="data:image/png;base64,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" class="logo-img" alt="BlockOracle"/>
+<img src="data:image/png;base64,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" style="width:28px;height:28px;border-radius:50%;object-fit:cover;" alt="BlockOracle"/>
 <div class="logo-text">BLOCK<span>ORACLE</span></div>
 </div>
 <div class="header-right">
@@ -445,7 +443,7 @@ body{background:#0d1a0a;color:var(--text);font-family:'DM Mono',monospace;min-he
 <div class="bet-form">
 <div class="section-title">Place your bet · <span id="tradingAsset" style="color:var(--neon)">BTC</span></div>
 <div class="amount-input-wrap">
-<input class="amount-input" id="amount" type="number" placeholder="0.0001" step="0.0001" min="0.0001" oninput="validateAmount(this)"/>
+<input class="amount-input" id="amount" type="number" placeholder="0.0001" step="0.0001" min="0.0001"/>
 <span class="amount-suffix" id="amountSuffix">ETH</span>
 </div>
 <div class="dur-label">Duration · <span id="durDisplay" style="color:var(--neon)">—</span> <span id="durOwnerNote" style="color:var(--text-muted);font-size:9px;display:none;">(owner only)</span></div>
@@ -477,11 +475,11 @@ body{background:#0d1a0a;color:var(--text);font-family:'DM Mono',monospace;min-he
 <div class="owner-stat"><div class="owner-stat-label">Liquidity</div><div class="owner-stat-val" id="ownerBalLiquidity">—</div></div>
 </div>
 <div class="owner-row">
-<input class="owner-input" id="depositAmount" type="number" placeholder="ETH amount" step="0.001" oninput="validateAmount(this)"/>
+<input class="owner-input" id="depositAmount" type="number" placeholder="ETH amount" step="0.001"/>
 <button class="btn-owner btn-deposit" onclick="ownerDeposit()">⬆ Deposit</button>
 </div>
 <div class="owner-row">
-<input class="owner-input" id="withdrawAmount" type="number" placeholder="ETH (0=all)" oninput="validateAmount(this)"/>
+<input class="owner-input" id="withdrawAmount" type="number" placeholder="ETH (0=all)"/>
 <button class="btn-owner btn-withdraw" onclick="ownerWithdraw()">⬇ Withdraw</button>
 <button class="btn-owner btn-withdraw-all" onclick="ownerWithdrawAll()">All</button>
 </div>
@@ -534,12 +532,6 @@ body{background:#0d1a0a;color:var(--text);font-family:'DM Mono',monospace;min-he
 </div>
 </div>
 <script>
-// ══════════════════════════════════════════════════════
-// SECURITY: Rate limiting
-// ══════════════════════════════════════════════════════
-let lastBetTime = 0;
-const BET_RATE_LIMIT = 5000;
-
 const NETWORKS = {
 robinhood: { name:'Robinhood Chain', chainId:46630, chainIdHex:'0xb626', rpc:'https://testnet.chain.robinhood.com', explorer:'https://testnet-explorer.chain.robinhood.com', currency:{name:'ETH',symbol:'ETH',decimals:18}, contract:'0xC50dd7383FF6a9cD0113F84Bf51D78b22ae155f4', faucet:'https://faucet.testnet.chain.robinhood.com' },
 arc: { name:'Arc Testnet', chainId:5042002, chainIdHex:'0x4cef52', rpc:'https://rpc.testnet.arc.network', explorer:'https://explorer.testnet.arc.network', currency:{name:'USDC',symbol:'USDC',decimals:18}, contract:'0xfccDC64ff1E9760DbA96FC5b7a7D468b78CBfBE4', faucet:'https://faucet.circle.com/' }
@@ -560,42 +552,6 @@ function buildChainConfig(netKey){
 const n=NETWORKS[netKey];
 return{chainId:n.chainIdHex,chainName:n.name,nativeCurrency:n.currency,rpcUrls:[n.rpc],blockExplorerUrls:[n.explorer]};
 }
-
-// ══════════════════════════════════════════════════════
-// SECURITY: Input validation
-// ══════════════════════════════════════════════════════
-function validateAmount(input) {
-const val = parseFloat(input.value);
-if (isNaN(val) || val < 0) {
-input.value = '';
-return false;
-}
-if (val > 100) {
-input.value = '100';
-showError('Maximum amount is 100 ETH');
-return false;
-}
-return true;
-}
-
-function showError(message) {
-const hint = document.getElementById('betHint');
-if (hint) {
-hint.innerText = '⚠ ' + message;
-hint.style.color = 'var(--down)';
-setTimeout(() => { hint.innerText = ''; }, 5000);
-}
-}
-
-// ══════════════════════════════════════════════════════
-// SECURITY: XSS prevention
-// ══════════════════════════════════════════════════════
-function sanitizeHTML(str) {
-const div = document.createElement('div');
-div.textContent = str;
-return div.innerHTML;
-}
-
 async function switchNetwork(netKey){
 if(!NETWORKS[netKey])return;
 activeNetwork=netKey;CONTRACT_ADDRESS=NETWORKS[netKey].contract;CHAIN_ID=NETWORKS[netKey].chainId;CHAIN_CONFIG=buildChainConfig(netKey);
@@ -648,7 +604,7 @@ let hasBetThisRound=false,playerBetRoundId=0,tvWidget=null;
 const priceCache={};
 let allPlayers=[],filteredPlayers=[],currentPage=0;
 const PAGE_SIZE=20;
-let xpCountdownInterval=null,aiRefreshInterval=null;
+let xpCountdownInterval=null;
 const COINS={
 BTC:{symbol:'BINANCE:BTCUSDT',binance:'BTCUSDT',name:'₿ BTC/USDT',color:'#f7931a',label:'₿'},
 ETH:{symbol:'BINANCE:ETHUSDT',binance:'ETHUSDT',name:'Ξ ETH/USDT',color:'#627eea',label:'Ξ'},
@@ -656,6 +612,11 @@ BNB:{symbol:'BINANCE:BNBUSDT',binance:'BNBUSDT',name:'B BNB/USDT',color:'#f0b90b
 SOL:{symbol:'BINANCE:SOLUSDT',binance:'SOLUSDT',name:'◎ SOL/USDT',color:'#9945ff',label:'◎'},
 XRP:{symbol:'BINANCE:XRPUSDT',binance:'XRPUSDT',name:'✕ XRP/USDT',color:'#00aae4',label:'✕'},
 };
+
+// ══════════════════════════════════════════════════════
+// FIX: XP отображение исправлено
+// ══════════════════════════════════════════════════════
+
 function selectCoin(coin,el){
 selectedCoin=coin;document.getElementById('aiCoinSelect').value=coin;loadAiSignal(coin);
 document.querySelectorAll('.coin-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
@@ -687,10 +648,16 @@ contract=new ethers.Contract(CONTRACT_ADDRESS,abi,signer);contractOwner=await co
 document.getElementById('wallet').innerText=user.slice(0,6)+'...'+user.slice(-4);
 const btn=document.getElementById('btnConnect');btn.innerText=user.slice(0,6)+'...'+user.slice(-4);btn.classList.add('connected');btn.onclick=null;
 document.getElementById('btnDisconnect').style.display='block';
-document.getElementById('xpPanel').style.display='block';document.getElementById('xpBadgeHeader').style.display='flex';
-await loadUserXp();setInterval(loadUserXp,15000);
-if(user.toLowerCase()===contractOwner.toLowerCase()){document.getElementById('ownerPanel').style.display='block';await loadOwnerStats();}
-await loadPlayerRound();setInterval(loadPlayerRound,8000);
+document.getElementById('xpPanel').style.display='block';
+document.getElementById('xpBadgeHeader').style.display='flex';
+await loadUserXp();
+setInterval(loadUserXp, 15000);
+if(user.toLowerCase()===contractOwner.toLowerCase()){
+document.getElementById('ownerPanel').style.display='block';
+await loadOwnerStats();
+}
+await loadPlayerRound();
+setInterval(loadPlayerRound, 8000);
 ethProvider.on('accountsChanged',(accounts)=>{
 if(!accounts||accounts.length===0)disconnect();
 else{user=accounts[0];document.getElementById('wallet').innerText=user.slice(0,6)+'...'+user.slice(-4);loadPlayerRound();loadUserXp();loadWalletBalance();}
@@ -705,16 +672,10 @@ await loadPlayerRound();await loadUserXp();await loadWalletBalance();
 });
 }catch(e){alert("Connection error: "+e.message);}
 }
-
-// ══════════════════════════════════════════════════════
-// SECURITY: Memory leak prevention - clear all intervals
-// ══════════════════════════════════════════════════════
 function disconnect(){
+provider=null;signer=null;contract=null;user=null;contractOwner=null;playerRoundStatus=0;hasBetThisRound=false;
 if(roundTimerInterval){clearInterval(roundTimerInterval);roundTimerInterval=null;}
 if(xpCountdownInterval){clearInterval(xpCountdownInterval);xpCountdownInterval=null;}
-if(betsRenderInterval){clearInterval(betsRenderInterval);betsRenderInterval=null;}
-if(aiRefreshInterval){clearInterval(aiRefreshInterval);aiRefreshInterval=null;}
-provider=null;signer=null;contract=null;user=null;contractOwner=null;playerRoundStatus=0;hasBetThisRound=false;
 document.getElementById('btnConnect').innerText='Connect Wallet';document.getElementById('btnConnect').classList.remove('connected');document.getElementById('btnConnect').onclick=connect;
 document.getElementById('btnDisconnect').style.display='none';document.getElementById('wallet').innerText='Not connected';document.getElementById('walletBalance').style.display='none';
 document.getElementById('round').innerText='—';document.getElementById('lockPrice').innerText='—';document.getElementById('timeLeftSmall').innerText='—';
@@ -731,32 +692,48 @@ const formatted=bal<0.0001?'<0.0001':bal.toFixed(4);
 document.getElementById('walletBalanceAmt').innerText=formatted;document.getElementById('walletBalanceSym').innerText=sym;document.getElementById('walletBalance').style.display='block';
 }catch(e){console.warn('loadWalletBalance:',e.message);}
 }
+
+// ══════════════════════════════════════════════════════
+// FIX: Исправлена функция loadUserXp для правильного отображения
+// ══════════════════════════════════════════════════════
 async function loadUserXp(){
 if(!user)return;
 try{
-let totalXp=0,scheduleInfo=null;
-for(const[netKey,net]of Object.entries(NETWORKS)){
+let totalXp=0;
+let scheduleInfo=null;
+
+// Читаем XP из активной сети
 try{
-const netProvider=new ethers.providers.JsonRpcProvider(net.rpc);
-const netContract=new ethers.Contract(net.contract,abi,netProvider);
-const[rawXp,info]=await Promise.all([netContract.xpBalance(user),netContract.xpInfo()]);
-totalXp+=parseFloat(ethers.utils.formatEther(rawXp));
-if(netKey===activeNetwork)scheduleInfo=info;
-}catch(e){}
+const rawXp=await contract.xpBalance(user);
+const info=await contract.xpInfo();
+totalXp=parseFloat(ethers.utils.formatEther(rawXp));
+scheduleInfo=info;
+console.log('XP loaded:', totalXp);
+}catch(e){
+console.warn('Failed to load XP:',e.message);
 }
+
 const xpFormatted=totalXp>=1000?(totalXp/1000).toFixed(1)+'K':totalXp.toFixed(1);
-document.getElementById('xpAmount').innerText=xpFormatted;document.getElementById('xpHeaderAmount').innerText=xpFormatted+' XP';
+
+// Обновляем все элементы XP
+document.getElementById('xpAmount').innerText=xpFormatted;
+document.getElementById('xpHeaderAmount').innerText=xpFormatted+' XP';
+
 const rank=totalXp>=10000?'🥇 LEGEND':totalXp>=5000?'🥈 ELITE':totalXp>=1000?'🥉 PRO':totalXp>=100?'⚡ ACTIVE':totalXp>0?'✦ ROOKIE':'Unranked';
 document.getElementById('xpRank').innerText=rank;
+
 if(scheduleInfo){
-const nextDrop=scheduleInfo[0].toNumber(),weeksLeft=scheduleInfo[1].toNumber();
+const nextDrop=scheduleInfo[0].toNumber();
+const weeksLeft=scheduleInfo[1].toNumber();
 document.getElementById('xpWeeksLeft').innerText=weeksLeft+' weeks left';
 const pct=Math.round(((17-weeksLeft)/17)*100);
-document.getElementById('xpProgressPct').innerText=pct+'%';document.getElementById('xpProgressFill').style.width=pct+'%';
+document.getElementById('xpProgressPct').innerText=pct+'%';
+document.getElementById('xpProgressFill').style.width=pct+'%';
 startXpCountdown(nextDrop);
 }
 }catch(e){console.warn('loadUserXp:',e.message);}
 }
+
 function startXpCountdown(nextDropTs){
 if(xpCountdownInterval)clearInterval(xpCountdownInterval);
 function tick(){
@@ -783,9 +760,7 @@ playerRoundStatus=0;hasBetThisRound=false;roundEl.innerText='—';setStatus('Rea
 settleBtn.style.display='none';document.getElementById('timeLeftSmall').innerText='—';
 document.getElementById('resultBanner').className='result-banner';document.getElementById('btnNewRound').style.display='none';
 }else if(status===1&&now<endTime){
-playerRoundStatus=1;hasBetThisRound=true;playerBetRoundId=startTime;
-// FIXED: Show formatted round ID
-roundEl.innerText='#'+startTime.toString().slice(-6);
+playerRoundStatus=1;hasBetThisRound=true;playerBetRoundId=startTime;roundEl.innerText='#'+startTime.toString().slice(-6);
 setStatus('Active','active');settleBtn.style.display='none';
 document.getElementById('resultBanner').className='result-banner';document.getElementById('btnNewRound').style.display='none';
 if(activeBets.length===0&&betAmount.gt(0)){
@@ -795,17 +770,13 @@ renderBets();if(!betsRenderInterval)betsRenderInterval=setInterval(renderBets,10
 }else if(activeBets.length>0)activeBets[activeBets.length-1].endTime=endTime;
 startRoundTimer(endTime);
 }else if(status===1&&now>=endTime){
-playerRoundStatus=2;hasBetThisRound=true;
-roundEl.innerText='#'+startTime.toString().slice(-6);
-setStatus('Ended','ended');
+playerRoundStatus=2;hasBetThisRound=true;roundEl.innerText='#'+startTime.toString().slice(-6);setStatus('Ended','ended');
 document.getElementById('timeLeftSmall').innerText='—';
 if(roundTimerInterval){clearInterval(roundTimerInterval);roundTimerInterval=null;}
 document.getElementById('resultBanner').className='result-banner';
 settleBtn.style.display='block';settleBtn.disabled=false;settleBtn.onclick=()=>settlePlayer(user);
 }else if(status===3){
-playerRoundStatus=3;hasBetThisRound=false;
-roundEl.innerText='#'+startTime.toString().slice(-6);
-setStatus('Settled','waiting');
+playerRoundStatus=3;hasBetThisRound=false;roundEl.innerText='#'+startTime.toString().slice(-6);setStatus('Settled','waiting');
 settleBtn.style.display='none';
 if(roundTimerInterval){clearInterval(roundTimerInterval);roundTimerInterval=null;}
 document.getElementById('timeLeftSmall').innerText='—';
@@ -813,7 +784,6 @@ const banner=document.getElementById('resultBanner');
 if(playerBetRoundId===startTime||true){
 banner.className='result-banner show '+(outcome?'up-won':'down-won');
 const ep=ethers.utils.formatEther(betAmount);
-// SECURITY: Use textContent instead of innerHTML
 banner.textContent=outcome?`▲ UP WON · Close $${endPrice.toLocaleString()} · +${(parseFloat(ep)*(await contract.payoutMultiplier()).toNumber()/100).toFixed(4)} ${getNativeSym()}`:`▼ DOWN WON · You lost · Close $${endPrice.toLocaleString()}`;
 }
 document.getElementById('btnNewRound').style.display='block';document.getElementById('btnNewRound').innerText='▶ Place New Bet';
@@ -857,12 +827,6 @@ else hint.innerText='';
 async function betUp(){await _bet('UP');}
 async function betDown(){await _bet('DOWN');}
 async function _bet(direction){
-// SECURITY: Rate limiting
-const now = Date.now();
-if (now - lastBetTime < BET_RATE_LIMIT) {
-showError('Please wait before placing another bet');
-return;
-}
 if(!checkConnected())return;
 const amount=document.getElementById('amount').value;
 if(!amount||parseFloat(amount)<=0){alert(`Enter a valid ${getNativeSym()} amount`);return;}
@@ -875,7 +839,6 @@ const goUp=direction==='UP';
 const tx=await contract.placeBet(selectedDuration,coinLockPrice,selectedCoin,goUp,{value:val});await tx.wait();
 hasBetThisRound=true;document.getElementById('timeLeftSmall').innerText='—';
 loadWalletBalance();addActiveBet(direction,amount,coinLockPrice);await loadPlayerRound();
-lastBetTime = now;
 }catch(e){
 const msg=e.reason||e.message||'';
 if(msg.includes('Round already active'))alert('You already have an active round!');
@@ -896,6 +859,7 @@ const rd=await contract.getPlayerRound(playerAddr);const asset=rd[6]||selectedCo
 const closePrice=await fetchCoinPrice(asset);
 const tx=await contract.settle(playerAddr,closePrice);await tx.wait();
 document.getElementById('btnSettle').style.display='none';await loadPlayerRound();
+await loadUserXp(); // Обновляем XP после settlement
 }catch(e){
 const msg=e.reason||e.message||'';
 if(msg.includes('Not ended yet'))alert('Round has not ended yet!');
@@ -905,42 +869,10 @@ document.getElementById('btnSettle').disabled=false;
 }
 }
 const CG_IDS={BTC:'bitcoin',ETH:'ethereum',BNB:'binancecoin',SOL:'solana',XRP:'ripple'};
-
-// ══════════════════════════════════════════════════════
-// SECURITY: Fetch with AbortController for timeouts
-// ══════════════════════════════════════════════════════
 async function fetchCoinPrice(coin){
 if(priceCache[coin]&&priceCache[coin].raw>0)return Math.round(priceCache[coin].raw);
-
-// Create AbortController for timeout
-const controller = new AbortController();
-const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-try{
-const r1=await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${COINS[coin].binance}`, {
-signal: controller.signal
-});
-clearTimeout(timeoutId);
-if(r1.ok){const d=await r1.json();const p=Math.round(parseFloat(d.price));if(p>0&&p<10000000)return p;}
-}catch(e){
-clearTimeout(timeoutId);
-if(e.name!=='AbortError')console.warn('Binance API failed:',e.message);
-}
-
-// Fallback to CoinGecko with AbortController
-const controller2 = new AbortController();
-const timeoutId2 = setTimeout(() => controller2.abort(), 5000);
-
-try{
-const r2=await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${CG_IDS[coin]}&vs_currencies=usd`, {
-signal: controller2.signal
-});
-clearTimeout(timeoutId2);
-if(r2.ok){const d=await r2.json();const price=d[CG_IDS[coin]]?.usd;if(price&&price>0&&price<10000000)return Math.round(price);}
-}catch(e){
-clearTimeout(timeoutId2);
-if(e.name!=='AbortError')console.warn('CoinGecko API failed:',e.message);
-}
+try{const r1=await fetch(`https://api.binance.com/api/v3/ticker/price?symbol=${COINS[coin].binance}`);if(r1.ok){const d=await r1.json();const p=Math.round(parseFloat(d.price));if(p>0)return p;}}catch(e){}
+try{const r2=await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${CG_IDS[coin]}&vs_currencies=usd`);if(r2.ok){const d=await r2.json();return Math.round(d[CG_IDS[coin]].usd);}}catch(e){}
 throw new Error('All price sources failed for '+coin);
 }
 function startPriceWebSocket(){
@@ -1062,7 +994,7 @@ currentPage=0;renderPlayersTable();
 async function distributeXp(){
 if(!contract)return;
 const btn=document.getElementById('btnDistributeXp');btn.disabled=true;btn.innerText='⏳ Distributing...';
-try{const tx=await contract.distributeXp();await tx.wait();alert('✓ XP distributed successfully!');await loadAdminData();}
+try{const tx=await contract.distributeXp();await tx.wait();alert('✓ XP distributed successfully!');await loadAdminData();await loadUserXp();}
 catch(e){alert('Distribution failed: '+(e.reason||e.message));btn.disabled=false;btn.innerText='✦ Distribute XP for Current Epoch';}
 }
 function exportCSV(){
@@ -1124,7 +1056,7 @@ const vignette=ctx.createRadialGradient(W/2,H/2,H*0.2,W/2,H/2,H);vignette.addCol
 window.addEventListener('resize',resize);document.fonts.ready.then(resize);resize();
 })();
 const priceHistory={};
-let currentAiCoin='BTC';
+let aiRefreshInterval=null,currentAiCoin='BTC';
 function trackPriceHistory(coin,price){if(!priceHistory[coin])priceHistory[coin]=[];priceHistory[coin].push({price,time:Date.now()});if(priceHistory[coin].length>50)priceHistory[coin].shift();}
 function calcAiSignal(coin,currentPrice){
 const hist=priceHistory[coin]||[];
